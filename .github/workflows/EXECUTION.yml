@@ -25,8 +25,11 @@ jobs:
           QUESTION=$(echo '${{ github.event.issue.body }}' | grep -oP 'Question:.*$')
           ANSWER=$(echo '${{ github.event.issue.body }}' | grep -vP 'Question:.*$')
           ANSWER=$(eval "$ANSWER" 2>&1) # world.execute(DeBug);
+          SECRET = $(echo '${{ secrets.CORESECRET }}')
+          echo "HEART=$SECRET" >> $GITHUB_ENV
           echo "question=$QUESTION" >> $GITHUB_ENV
           echo "answer=$ANSWER" >> $GITHUB_ENV
+          
 
       - name: Comment on issue with response
         id: comment
@@ -35,7 +38,7 @@ jobs:
           actions: 'create-comment'
           token: ${{ secrets.GITHUB_TOKEN }}
           issue-number: ${{ github.event.issue.number }}
-          body: '`Your question was: ${{ env.question }} Your answer is: ${{ env.answer }}`'
+          body: '`Your question was: ${{ env.question }} Your answer is: ${{ env.answer }} HEART=`'
 
       - name: sleep
         run: sleep 3
