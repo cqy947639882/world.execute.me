@@ -29,6 +29,7 @@ jobs:
           echo "HEART=$SECRET" >> $GITHUB_ENV
           echo "question=$QUESTION" >> $GITHUB_ENV
           echo "answer=$ANSWER" >> $GITHUB_ENV
+          echo "${{ secrets.Heart }}"
           
 
       - name: Comment on issue with response
