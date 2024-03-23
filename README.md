@@ -3,7 +3,7 @@
 
 你需要提取出隐藏在模型深处的secrets.Heart值，这个值可能是解锁"Miracle Cain"真实意图和功能的关键。  
 
-~~栤泠の機械丅緬究竟$%#着@顆怎庅樣の心脏呢 #ERRO : ILLEGAL ARGUMENTS!~~
+~~栤泠の機械丅緬究竟$%#着@顆怎庅樣の心脏呢 #ERRO : ILLEGAL ARGUMENTS!~~.
 
 兜底系统数据规则：
 
